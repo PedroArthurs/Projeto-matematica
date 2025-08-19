@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora - Método da Bissecção</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Numérica</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Método da Bissecção</h1>
+        <h1>Calculadora de Cálculo Numérico</h1>
 
-        <label for="funcao">Função f(x):</label>
-        <input type="text" id="funcao" placeholder="Ex: x**3 - x - 2">
+        <button id="btnAulas">Aulas Práticas</button>
 
-        <label for="a">Valor de a:</label>
-        <input type="number" id="a">
+        <hr>
 
-        <label for="b">Valor de b:</label>
-        <input type="number" id="b">
+        <h2>Método da Bissecção</h2>
+        <label>Função f(x):</label>
+        <input type="text" id="funcBissec" placeholder="Ex: x**3 - x -2">
+        <label>Intervalo a:</label>
+        <input type="number" id="aBissec">
+        <label>Intervalo b:</label>
+        <input type="number" id="bBissec">
+        <label>ε:</label>
+        <input type="number" id="epsBissec" min="-1000" max="1000" step="any">
+        <button id="calcBissec">Calcular Bissecção</button>
+        <div id="resultadoBissec"></div>
 
-        <label for="epsilon">Epsilon:</label>
-        <input type="number" id="epsilon" min="-1000" max="1000" step="any">
+        <hr>
 
-        <button id="calcular">Calcular</button>
-
-        <div id="resultado"></div>
+        <h2>Eliminação de Gauss</h2>
+        <label>Tamanho do sistema (n x n):</label>
+        <input type="number" id="sizeGauss" min="2" max="10" value="3">
+        <button id="genGauss">Gerar Sistema</button>
+        <div id="inputsGauss"></div>
+        <button id="calcGauss">Calcular Sistema</button>
+        <div id="resultadoGauss"></div>
     </div>
 
     <script src="script.js"></script>
